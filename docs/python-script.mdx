@@ -1,0 +1,33 @@
+---
+title: Python Script
+---
+
+# Python Script
+
+This section explains how to use the Python script to generate passwords.
+
+```python
+import random
+import string
+
+class PasswordGenerator:
+    def __init__(self, length):
+        self.length = length
+
+    def generate_password(self):
+        characters = string.ascii_letters + string.digits + string.punctuation
+        password = ''.join(random.choice(characters) for _ in range(self.length))
+        return password
+
+if __name__ == "__main__":
+    password_length = int(input("Enter password length:"))
+    password_generator = PasswordGenerator(password_length)
+    password = password_generator.generate_password()
+    print("Generated Password:", password)
+```
+
+To generate a password, follow these steps:
+
+Input the desired password length.
+Run the script.
+The generated password will be displayed.

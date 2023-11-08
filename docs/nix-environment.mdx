@@ -1,0 +1,20 @@
+---
+title: Nix Environment
+---
+
+# Nix Environment
+
+This section describes the customized Nix environment for running the Python script.
+
+```sh
+```shell
+{ pkgs ? import <nixpkgs> {} }:
+ with pkgs;
+ mkShell {
+   buildInputs = [ python312 ];
+ }
+To set up the Nix environment:
+
+Make sure you have Nix installed on your system.
+Create a Nix expression that includes the necessary packages.
+Use nix-shell to activate the environment.
